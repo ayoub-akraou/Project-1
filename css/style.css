@@ -1,0 +1,362 @@
+:root {
+  --gray: #444;
+  --description-color: #666;
+  --blue: #3f50cc;
+  --light-gray: #eee;
+  --side-padding: 12%;
+}
+/**************** start navigation************* */
+.icon {
+  color: #fff;
+  font-size: 30px;
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 1001;
+  display: none;
+}
+.icon:hover ~ nav {
+  min-height: 100vh;
+}
+nav {
+  z-index: 1000;
+  padding: 0 2rem;
+  background-color: var(--gray);
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 0.1rem 0.5rem rgb(0 0 0 / 30%);
+}
+nav ul {
+  gap: 1rem;
+}
+nav ul a {
+  font-size: 2rem;
+  padding: 0.5rem 2rem;
+  color: #fff;
+  display: inline-block;
+  transition-duration: 0.5s;
+}
+nav ul li a:hover,
+a.active {
+  background-color: #fff;
+  color: var(--gray);
+}
+nav ul li:first-child {
+  margin-right: auto;
+}
+nav ul li:first-child a {
+  font-size: 2.5rem;
+  padding: 1rem 4rem;
+  background-color: #fff;
+  color: var(--gray);
+}
+nav ul li:first-child a i {
+  color: var(--blue);
+}
+/**************** end navigation ***************/
+
+/***************** start header ****************/
+header {
+  min-height: 100vh;
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 6rem var(--side-padding) 4rem;
+  gap: 5rem;
+}
+header .box h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  color: var(--gray);
+}
+header .box p {
+  font-size: 1.8rem;
+  color: var(--description-color);
+  margin: 1rem 0 2rem;
+}
+header .image {
+  width: fit-content;
+  height: fit-content;
+}
+header .box button a {
+  box-shadow: 0 0.3rem 0.5rem rgb(0 0 0 / 30%);
+  font-size: 2rem;
+  padding: 0.7rem 2rem;
+  color: #fff;
+  display: inline-block;
+}
+header .box button:first-of-type a {
+  background-color: var(--blue);
+  margin-right: 1rem;
+}
+header .box button:last-of-type a {
+  background-color: var(--gray);
+}
+header .box button a:hover {
+  opacity: 0.8;
+  box-shadow: none;
+  transition-duration: 0.5s;
+}
+/******************* end header *********************/
+
+/**************** start feature section *************/
+.feature .box {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 3rem;
+  box-shadow: 0 0 1.5rem 0.1rem rgb(0 0 0 / 10%);
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.feature .box i {
+  font-size: 5rem;
+  color: var(--blue);
+  padding: 1rem 0;
+}
+.feature .box h3 {
+  font-size: 2rem;
+  color: var(--gray);
+  padding-top: 1rem;
+}
+.feature .box p {
+  font-size: 1.2rem;
+  color: var(--description-color);
+  padding: 1rem 0;
+}
+.feature .box:hover {
+  background-color: var(--gray);
+}
+.feature .box * {
+  transition-duration: 0.5s;
+}
+.feature .box:hover i,
+.feature .box:hover h3,
+.feature .box:hover p {
+  color: var(--light-gray);
+}
+/***************** end feature section *************/
+
+/***************** end feature section *************/
+
+/* .screenshot .container .image  {} */
+.screenshot .container .image img {
+  width: 100%;
+  box-shadow: 0 0 1rem rgb(0 0 0 / 30%);
+}
+/***************** end feature section *************/
+
+/***************** customer review section *************/
+/* .customer-review  {} */
+/* .customer-review .container  {} */
+.customer-review .container .box {
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid rgb(0 0 0 / 10%);
+  box-shadow: 0 0 1rem rgb(0 0 0 / 10%);
+}
+.customer-review img {
+  max-width: 10rem;
+  aspect-ratio: 1/1;
+  margin: 1rem 0;
+}
+.customer-review h3 {
+  font-size: 2rem;
+  color: var(--gray);
+}
+.customer-review p {
+  font-size: 1.5rem;
+  padding: 2rem;
+  color: var(--description-color);
+}
+.customer-review i {
+  font-size: 1.5rem;
+  color: var(--blue);
+}
+/***************** customer review section *************/
+
+/********************** plan section *******************/
+.plan {
+  background-color: var(--light-gray);
+}
+
+/* .plan .container  {} */
+
+.plan .box {
+  flex-direction: column;
+  box-shadow: 0 0 1rem 0.1rem rgb(0 0 0 / 20%);
+  padding-bottom: 3rem;
+  background-color: white;
+  margin-bottom: 5rem;
+  transition-duration: 0.5s;
+}
+.plan .box:hover {
+  transform: scale(1.025);
+  box-shadow: 0 0 2rem rgb(0 0 0 / 40%);
+}
+.plan h2 {
+  background-color: var(--blue);
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 2.7rem;
+  padding: 1rem 0;
+}
+.plan span::after {
+  content: "/Mo";
+  font-size: 2rem;
+}
+
+.plan span {
+  padding: 1.5rem 0;
+  font-size: 3.5rem;
+  color: var(--gray);
+  font-weight: 600;
+}
+.plan ul {
+  font-size: 1.5rem;
+  color: var(--description-color);
+  margin-bottom: 2rem;
+}
+.plan li:not(last-of-type) {
+  margin-bottom: 1rem;
+}
+.plan i {
+  margin-right: 1rem;
+}
+.plan .checked {
+  color: lime;
+}
+.plan .closed {
+  color: tomato;
+}
+.plan button a {
+  box-shadow: 0 0rem 0.5rem rgb(0 0 0 / 30%);
+  font-size: 2rem;
+  padding: 0.7rem 2rem;
+  color: #fff;
+  display: inline-block;
+  background-color: var(--blue);
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.plan button a:hover {
+  opacity: 0.8;
+}
+/*********************** plan section ******************/
+
+/********************* download section ****************/
+.download {
+  background-color: #222;
+  padding: 7rem calc(var(--side-padding) - 4%) 10rem;
+}
+
+.download .box {
+  background-color: #333;
+  box-shadow: 0 0 2rem 0.3rem #000;
+  text-align: center;
+  padding: 2rem;
+}
+.download i {
+  font-size: 5rem;
+  color: var(--light-gray);
+  margin: 2rem 0;
+}
+.download h2 {
+  font-size: 2rem;
+  color: var(--light-gray);
+}
+.download p {
+  font-size: 1.4rem;
+  padding: 2rem;
+  color: var(--light-gray);
+  line-height: 1.5;
+}
+.download button {
+  margin-top: 1rem;
+  background-color: transparent;
+}
+.download a {
+  color: white;
+  font-size: 2rem;
+  padding: 0.7rem 2rem;
+  background-color: var(--blue);
+  display: inline-block;
+}
+.download a:hover {
+  opacity: 0.8;
+}
+/********************* download section ****************/
+
+/********************** footer section *****************/
+
+/* footer  {} */
+
+footer .container {
+  padding: 3rem 2rem;
+  background-color: var(--light-gray);
+  color: #333;
+}
+footer .box:nth-of-type(2) {
+  text-align: center;
+}
+footer .box > *:not(:last-child),
+footer ul li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+footer h3 {
+  font-size: 2.5rem;
+  color: var(--blue);
+}
+footer p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+footer a {
+  font-size: 1.8rem;
+  transition-duration: 0.5s;
+  color: inherit;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+.search {
+  display: flex;
+  box-shadow: 0 0 1rem 0.1rem rgb(0 0 0 / 10%);
+  border: 1px solid rgb(0 0 0 / 10%);
+}
+.search label {
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: var(--blue);
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  min-width: 5rem;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.search label:hover {
+  background-color: #333;
+}
+.search input {
+  font-size: 1.6rem;
+  padding: 1rem;
+  width: calc(100% - 5rem);
+  letter-spacing: 0.7px;
+}
+.last {
+  padding: 2rem 0;
+  font-size: 2rem;
+  text-align: center;
+  background-color: var(--gray);
+  color: #ccc;
+  font-weight: 600;
+}
+.last span {
+  color: #fff;
+}
+/********************** footer section *****************/
