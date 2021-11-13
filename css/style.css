@@ -9,8 +9,8 @@
 .icon {
   color: #fff;
   font-size: 30px;
-  position: absolute;
-  top: 2px;
+  position: fixed;
+  top: 5px;
   right: 10px;
   cursor: pointer;
   z-index: 1001;
